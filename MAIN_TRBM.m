@@ -276,6 +276,6 @@ Z_Nt = 5000; % number of time bins for simuation
 [ logZ ] = TRBM_logZ_Annealed_Importance_Sampling( M, Z_K, Z_Nt, loglikel_Nbin); % log partition function
 
 % Mean response log likelihood
-loglikel_train_m = mean( TRBM_mF_cyclic_given_Nb(M, loglikel_Nbin, resp_like_train, loglikel_Nbin)) - logZ
-loglikel_test_m  = mean( TRBM_mF_cyclic_given_Nb(M, loglikel_Nbin, resp_like_test,  loglikel_Nbin)) - logZ
+loglikel_train_m = mean( TRBM_mF_cyclic_given_Nb(M, loglikel_Nbin, resp_train, loglikel_Nbin)) - logZ
+loglikel_test_m  = mean( TRBM_mF_cyclic_given_Nb(M, loglikel_Nbin, resp_test,  loglikel_Nbin)) - logZ
 
