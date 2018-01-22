@@ -31,7 +31,7 @@ Nt = Nb_perseq*ceil(Nt/Nb_perseq); % make sure Nb_perseq divides Nt
 
 if  Nj>Ni
     Minv = struct('a',M.b,'b',M.a,'w',permute(M.w,[2 1 3]));
-    [ Z ] = TRBM_logZperbin_Annealed_Importance_Sampling( Minv, K, Nt);
+    [ Z ] = TRBM_logZ_Annealed_Importance_Sampling( Minv, K, Nt, Nb_perseq);
     
 else
     %%
